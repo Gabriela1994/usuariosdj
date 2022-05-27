@@ -3,14 +3,8 @@ from unipath import Path
 from django.core.exceptions import ImproperlyConfigured
 import json
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).ancestor(3)
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 with open("secret.json") as f:
     secret = json.loads(f.read())
 
@@ -35,10 +29,10 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 )
 
-#APLICACIONES DE NOSOTROS
+#App locales
 LOCAL_APPS = ()
 
-#APLICACIONES DE TERCERO QUE USEMOS
+#apps de otros
 THIRD_PARTY_APPS = ()
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
@@ -73,9 +67,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'usuarios.wsgi.application'
 
-# Password validation
-# https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -91,9 +82,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
-# https://docs.djangoproject.com/en/4.0/topics/i18n/
 
 LANGUAGE_CODE = 'es-mx'
 
