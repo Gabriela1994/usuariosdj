@@ -30,7 +30,9 @@ DJANGO_APPS = (
 )
 
 #App locales
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'applications.users',
+    )
 
 #apps de otros
 THIRD_PARTY_APPS = ()
@@ -82,6 +84,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'users.User'
+
 # Internationalization
 
 LANGUAGE_CODE = 'es-mx'
@@ -91,3 +95,4 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
