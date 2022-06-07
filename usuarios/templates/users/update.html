@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Registrar nuevo usuario</h1>
-    <form method="POST"> {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Registrar</button>
+    <h1>Cambiar contraseña: {{user.get_full_name}} </h1>
+    <form method="post"> {% csrf_token %}
+        {{form.as_p }}
+        <button type="submit">Cambiar contraseña</button>
     </form>
 </body>
 </html>
